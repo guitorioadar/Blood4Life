@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baidoos.guitorio.blood4life.LoginAndRegister.Registration">
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="General People"
+        android:id="@+id/btnGeneralPeople"
+        android:onClick="btnGeneralPeople"
+        android:layout_above="@+id/btnMembers"
+        android:layout_marginBottom="30dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Members"
+        android:id="@+id/btnMembers"
+        android:onClick="btnMember"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Admin"
+        android:id="@+id/btnAdmin"
+        android:onClick="btnAdmin"
+        android:layout_below="@+id/btnMembers"
+        android:layout_marginTop="30dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:layout_marginTop="5dp"
+tools:context="com.baidoos.guitorio.blood4life.LoginAndRegister.RegisterAdmin">
+
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/et_Full_Name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Full Name" />
+
+        <Spinner
+            android:id="@+id/spn_Blood_Group"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/et_Full_Name"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
+        <Spinner
+            android:id="@+id/spn_gender"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/spn_Blood_Group"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/et_date_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/spn_gender"
+            android:text="Press to set ''Date of Birth''"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:id="@+id/et_contact_no"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:layout_below="@+id/et_date_of_birth"
+            android:layout_centerHorizontal="true"
+            android:hint="Contact Number" />
+
+        <Spinner
+            android:id="@+id/spn_country"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/et_contact_no"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:gravity="center"/>
+
+        <Spinner
+            android:id="@+id/spn_division"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/spn_country"
+            android:layout_centerHorizontal="true" />
+
+        <Spinner
+            android:id="@+id/spn_district"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/spn_division" />
+
+        <EditText
+            android:id="@+id/et_permanent_address"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/spn_district"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLength="500"
+            android:maxLines="4"
+            android:hint="Permanent Address"/>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/et_permanent_address"
+            android:layout_marginTop="10dp"
+            android:inputType="textEmailAddress"
+            android:hint="Email"/>
+
+        <EditText
+            android:id="@+id/et_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/et_email"
+            android:layout_marginTop="10dp"
+            android:inputType="text"
+            android:hint="Username"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/et_user_name"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:inputType="textVisiblePassword"/>
+
+        <EditText
+            android:id="@+id/et_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Confirm Password"
+            android:layout_below="@id/et_password"
+            android:inputType="textVisiblePassword"
+            android:layout_marginTop="10dp"/>
+
+        <Spinner
+            android:id="@+id/spn_available_status"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/et_confirm_password"/>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
+
+<Button
+    android:id="@+id/btn_Register_General_People"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Register"
+    android:layout_alignParentBottom="true"/>
+
+
+
+</RelativeLayout>

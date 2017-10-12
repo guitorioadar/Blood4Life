@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:paddingTop="@dimen/activity_vertical_margin"
+tools:context="com.baidoos.guitorio.blood4life.BloodRequest.BloodRequestsCreate">
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scrollView2"
+    android:layout_marginBottom="60dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/tv_blood_req_date_of_donation"
+            android:hint="Date of the donation"
+            android:gravity="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:hint="Patient Name"
+            android:id="@+id/et_blood_req_patient_name"
+            android:layout_below="@+id/tv_blood_req_date_of_donation"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/spn_blood_req_gender"
+            android:layout_below="@+id/et_blood_req_patient_name"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/spn_blood_req_blood_group"
+            android:layout_below="@+id/spn_blood_req_gender"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown" />
+
+        <EditText
+            android:id="@+id/et_blood_req_reason"
+            android:layout_below="@+id/spn_blood_req_blood_group"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:minLines="2"
+            android:gravity="top|left"
+            android:maxLines="10"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:scrollbars="vertical"
+            android:hint="Patient Reason e.g: Accident"
+            android:layout_marginTop="10dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/et_blood_req_contact_number"
+            android:layout_below="@+id/et_blood_req_reason"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:hint="Contact Number"/>
+
+        <EditText
+            android:id="@+id/et_blood_req_relation"
+            android:layout_below="@+id/et_blood_req_contact_number"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:hint="Relation with the patient e.g:Brother"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/et_blood_req_quantity_bag"
+            android:layout_below="@+id/et_blood_req_relation"
+            android:hint="Needed Blood Bag Quantity(1-5)"
+            android:inputType="numberDecimal"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/et_blood_req_already_managed_quantity_bag"
+            android:layout_below="@+id/et_blood_req_quantity_bag"
+            android:hint="Already Managed Bags(1-5)"
+            android:inputType="numberDecimal"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/spn_blood_req_country"
+            android:layout_below="@+id/et_blood_req_already_managed_quantity_bag"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/spn_blood_req_division"
+            android:layout_below="@+id/spn_blood_req_country"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown"/>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:id="@+id/spn_blood_req_district"
+            android:layout_below="@+id/spn_blood_req_division"
+            android:layout_marginTop="10dp"
+            android:spinnerMode="dropdown"/>
+
+    </RelativeLayout>
+
+</ScrollView>
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:id="@+id/btn_blood_req_submit_req"
+    android:layout_alignParentBottom="true"
+    android:text="Submit Request"/>
+
+</RelativeLayout>

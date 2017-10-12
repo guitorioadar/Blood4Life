@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.baidoos.guitorio.blood4life.AreaGeneralPeople.AreaGeneralPeople">
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blood Donor Search"
+        android:id="@+id/btn_Gen_Blood_Donor_Search"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blood Request"
+        android:id="@+id/btn_Gen_Blood_Request"
+        android:layout_below="@+id/btn_Gen_Blood_Donor_Search"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Blood Donor"
+        android:id="@+id/btn_Gen_Add_Blood_Donor"
+        android:layout_below="@+id/btn_Gen_Blood_Request"/>
+
+
+    <ListView
+        android:id="@+id/listViewGeneral"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_Gen_Add_Blood_Donor"/>
+
+
+</RelativeLayout>
