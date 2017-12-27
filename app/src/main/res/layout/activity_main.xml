@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/new_login_gradients"
     tools:context="com.baidoos.guitorio.blood4life.MainActivity">
 
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        app:srcCompat="@drawable/b4l_in_app_white"
+        android:layout_marginTop="30dp"/>
+
     <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_login"
+        android:text="Log in"
+        android:textColor="#f16f7d"
+        android:textAllCaps="false"
+        android:padding="16dp"
+        android:clickable="true"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_marginTop="50dp"
+        android:textSize="18sp"
+        android:layout_gravity="center_vertical"
+        android:onClick="btnLoginMain"/>
+
+    <Button
+        android:id="@+id/btnRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_signup"
+        android:text="Registration"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:padding="16dp"
+        android:onClick="btnRegistrationMain"/>
+
+    <!--<Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login"
@@ -14,9 +54,9 @@
         android:onClick="btnLoginMain"
         android:layout_alignParentTop="true"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp" />-->
 
-    <Button
+    <!--<Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Registration"
@@ -24,7 +64,7 @@
         android:onClick="btnRegistrationMain"
         android:layout_below="@+id/btnLogin"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp" />-->
 
     <!--<Button
         android:id="@+id/testButton"
@@ -35,12 +75,12 @@
         android:text="Test Activity"
         android:onClick="btnTestActivity"/>-->
 
-    <ListView
+    <!--<ListView
         android:id="@+id/listRequestBlood"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/btnRegistration"
         tools:layout_editor_absoluteY="0dp"
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp" />-->
 
-</RelativeLayout>
+</LinearLayout>
