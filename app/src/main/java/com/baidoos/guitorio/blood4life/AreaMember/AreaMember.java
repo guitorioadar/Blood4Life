@@ -4,6 +4,8 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -21,6 +23,7 @@ import com.baidoos.guitorio.blood4life.BloodDonorSearch.BloodDonorSearch;
 import com.baidoos.guitorio.blood4life.BloodRequest.BloodRequestsCreate;
 import com.baidoos.guitorio.blood4life.Config;
 import com.baidoos.guitorio.blood4life.MainActivity;
+import com.baidoos.guitorio.blood4life.Profiles.ProfileUsers;
 import com.baidoos.guitorio.blood4life.R;
 
 import org.json.JSONArray;
@@ -163,6 +166,27 @@ public class AreaMember extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        getMenuInflater().inflate(R.menu.menu,menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+
+        if(id == R.id.menu_add_blood_request){
+            startActivity(new Intent(AreaMember.this,BloodRequestsCreate.class));
+        }if (id == R.id.userProfile){
+            startActivity(new Intent(this, ProfileUsers.class));
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public void onBackPressed() {

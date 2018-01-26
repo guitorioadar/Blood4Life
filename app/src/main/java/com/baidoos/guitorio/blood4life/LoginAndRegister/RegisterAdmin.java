@@ -1,6 +1,7 @@
 package com.baidoos.guitorio.blood4life.LoginAndRegister;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -236,7 +237,9 @@ public class RegisterAdmin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                regGeneralPeople();
+                //regGeneralPeople();
+                Intent intent = new Intent(RegisterAdmin.this,RegisterOrganisationDetail.class);
+                startActivity(intent);
 
             }
         });

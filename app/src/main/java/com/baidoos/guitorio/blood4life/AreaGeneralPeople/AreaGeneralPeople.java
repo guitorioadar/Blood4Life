@@ -4,6 +4,9 @@ import android.app.ActivityOptions;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Html;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -21,6 +24,7 @@ import com.baidoos.guitorio.blood4life.BloodDonorSearch.BloodDonorSearch;
 import com.baidoos.guitorio.blood4life.BloodRequest.BloodRequestsCreate;
 import com.baidoos.guitorio.blood4life.Config;
 import com.baidoos.guitorio.blood4life.MainActivity;
+import com.baidoos.guitorio.blood4life.Profiles.ProfileUsers;
 import com.baidoos.guitorio.blood4life.R;
 
 import org.json.JSONArray;
@@ -45,6 +49,8 @@ public class AreaGeneralPeople extends AppCompatActivity {
     private final String JSON_ARRAY = "result";
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,11 +67,11 @@ public class AreaGeneralPeople extends AppCompatActivity {
         active_user = intent.getExtras().getString("active_user");
         Toast.makeText(AreaGeneralPeople.this, active_user, Toast.LENGTH_SHORT).show();*/
 
-        Toast.makeText(AreaGeneralPeople.this, Config.ACTIVE_USER, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(AreaGeneralPeople.this, Config.ACTIVE_USER, Toast.LENGTH_SHORT).show();
 
 
         btnGenBloodDonorSearch = (Button) findViewById(R.id.btn_Gen_Blood_Donor_Search);
-        btnGenBloodRequest = (Button) findViewById(R.id.btn_Gen_Blood_Request);
+        //btnGenBloodRequest = (Button) findViewById(R.id.btn_Gen_Blood_Request);
         btnGenAddBloodDonor = (Button) findViewById(R.id.btn_Gen_Add_Blood_Donor);
 
 
@@ -77,13 +83,13 @@ public class AreaGeneralPeople extends AppCompatActivity {
             }
         });
 
-        btnGenBloodRequest.setOnClickListener(new View.OnClickListener() {
+        /*btnGenBloodRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intentbtnGenBloodRequest = new Intent(AreaGeneralPeople.this, BloodRequestsCreate.class);
                 startActivity(intentbtnGenBloodRequest);
             }
-        });
+        });*/
 
         btnGenAddBloodDonor.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -165,6 +171,38 @@ public class AreaGeneralPeople extends AppCompatActivity {
 
     private void showGeneralBloodRequest() {
 
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu, menu);
+        menu.findItem(R.id.menu_add_blood_request).setTitle(Html.fromHtml("<font color='#ff3824'>Add Blood Request</font>"));
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+        if (id == R.id.menu_add_blood_request) {
+
+            //Toast.makeText(this, "Add", Toast.LENGTH_SHORT).show();
+            //return true;
+
+            Intent intentbtnGenBloodRequest = new Intent(AreaGeneralPeople.this, BloodRequestsCreate.class);
+            startActivity(intentbtnGenBloodRequest);
+
+        }if (id == R.id.userProfile){
+            startActivity(new Intent(this, ProfileUsers.class));
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
     @Override

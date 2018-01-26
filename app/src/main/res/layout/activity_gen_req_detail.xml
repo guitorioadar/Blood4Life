@@ -56,7 +56,10 @@
         android:id="@+id/genReqDetail_btnCall"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="Call to "/>
+        android:layout_marginTop="10dp"
+        android:text="Call to "
+        android:textColor="@color/white"
+        android:background="@drawable/background_signup"/>
 
 
 </LinearLayout>

@@ -21,6 +21,8 @@ tools:context="com.baidoos.guitorio.blood4life.BloodDonorSearch.DonorDetail">
     android:layout_below="@id/tvDonorName"
     android:layout_width="match_parent"
     android:layout_height="50dp"
-    android:text="Call This id"/>
+    android:text="Call This id"
+    android:textColor="@color/white"
+    android:background="@drawable/background_signup"/>
 
 </RelativeLayout>

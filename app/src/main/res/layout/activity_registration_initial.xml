@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_login_gradients"
+    tools:context="com.baidoos.guitorio.blood4life.LoginAndRegister.RegistrationInitial">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="7dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="220dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            app:srcCompat="@drawable/b4l_in_app_white" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnOrganisations"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/background_login"
+            android:onClick="OwnAccount"
+            android:padding="16dp"
+            android:text="Own Account"
+            android:textAllCaps="false"
+            android:textColor="#f16f7d"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnOrganisations"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/background_login"
+            android:onClick="RegisterOrganisation"
+            android:padding="16dp"
+            android:text="Register an Organisation"
+            android:textAllCaps="false"
+            android:textColor="#f16f7d"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/becomeMemberOfOrg"
+            style="@style/Base.TextAppearance.AppCompat.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/btnOrganisations"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_login"
+            android:onClick="BecomeAMemberofTheOrg"
+            android:padding="16dp"
+            android:text="Become a Memmber of the Organaisation"
+            android:textAllCaps="false"
+            android:textColor="#f16f7d"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>

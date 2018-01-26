@@ -11,8 +11,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".SplashScreen"
             android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen">
@@ -22,9 +21,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name=".MainActivity"></activity>
-
+        <activity android:name=".MainActivity" />
         <activity android:name=".LoginAndRegister.Login" />
         <activity android:name=".LoginAndRegister.Registration" />
         <activity android:name=".LoginAndRegister.RegisterAdmin" />
@@ -43,7 +40,13 @@
         <activity android:name=".BloodRequest.BloodRequestsCreate" />
         <activity android:name=".TestActivity.TestActivity" />
         <activity android:name=".TestActivity.TestActivity2" />
-
+        <activity android:name=".LoginAndRegister.RegistrationInitial" />
+        <activity android:name=".LoginAndRegister.RegisterOrganization" />
+        <activity android:name=".LoginAndRegister.RegisterAsMemberOfOrg" />
+        <activity android:name=".LoginAndRegister.RegisterOrganisationDetail" />
+        <activity android:name=".Profiles.ProfileUsers" />
+        <activity android:name=".PopulateSpinner" />
+        <activity android:name=".Profiles.EditProfile"></activity>
     </application>
 
 </manifest>

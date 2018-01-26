@@ -1,6 +1,7 @@
 package com.baidoos.guitorio.blood4life.LoginAndRegister;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -55,6 +56,7 @@ public class RegisterGeneralPeople extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_general_people);
+        setTitle("Register Own Area");
 
         spnBloodGroup = (Spinner) findViewById(R.id.spn_Blood_Group);
         spnGender = (Spinner) findViewById(R.id.spn_gender);
@@ -293,9 +295,9 @@ public class RegisterGeneralPeople extends AppCompatActivity {
                         @Override
                         public void onResponse(String response) {
                             Toast.makeText(RegisterGeneralPeople.this, response, Toast.LENGTH_SHORT).show();
-                            if(response.equals("success")){
-                                etFullname.setText(null);
-                                spnBloodGroup.getEmptyView();
+                            if(response.equals("Success")){
+                                Intent intent = new Intent(RegisterGeneralPeople.this,Login.class);
+                                startActivity(intent);
                             }
                         }
                     }, new Response.ErrorListener() {

@@ -1,153 +1,262 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context="com.baidoos.guitorio.blood4life.LoginAndRegister.RegisterGeneralPeople">
-
-
-<ScrollView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginBottom="50dp">
+    android:layout_height="match_parent"
+    android:background="@drawable/new_login_gradients"
+    tools:context="com.baidoos.guitorio.blood4life.LoginAndRegister.RegisterGeneralPeople">
 
-    <RelativeLayout
+
+    <ImageView
+        android:id="@+id/testImgaeLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        app:srcCompat="@drawable/b4l_in_app_white" />
+
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/testImgaeLogo"
+        android:layout_marginBottom="60dp"
+        android:layout_marginTop="10dp">
 
-
-        <EditText
-            android:id="@+id/et_Full_Name"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Full Name"/>
-
-        <Spinner
-            android:id="@+id/spn_Blood_Group"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/et_Full_Name"
-            android:layout_centerHorizontal="true"
-            android:gravity="center"/>
-        <Spinner
-            android:id="@+id/spn_gender"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/spn_Blood_Group"
-            android:gravity="center"
-            android:layout_centerHorizontal="true"/>
-
-        <TextView
-            android:id="@+id/et_date_of_birth"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@id/spn_gender"
-            android:text="Press to set ''Date of Birth''"
-            android:gravity="center"
-            android:textSize="18sp"
-            android:layout_marginTop="10dp"/>
-
-        <EditText
-            android:id="@+id/et_contact_no"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:layout_marginTop="10dp"
-            android:ems="10"
-            android:layout_below="@+id/et_date_of_birth"
-            android:layout_centerHorizontal="true"
-            android:hint="Contact Number" />
-
-        <Spinner
-            android:id="@+id/spn_country"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_below="@+id/et_contact_no"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:gravity="center"/>
-
-        <Spinner
-            android:id="@+id/spn_division"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/spn_country"
-            android:layout_centerHorizontal="true" />
-
-        <Spinner
-            android:id="@+id/spn_district"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@id/spn_division" />
-
-        <EditText
-            android:id="@+id/et_permanent_address"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@id/spn_district"
-            android:inputType="textCapSentences|textMultiLine"
-            android:maxLength="500"
-            android:maxLines="4"
-            android:hint="Permanent Address"/>
-
-        <EditText
-            android:id="@+id/et_email"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@id/et_permanent_address"
-            android:layout_marginTop="10dp"
-            android:inputType="textEmailAddress"
-            android:hint="Email"/>
-
-        <EditText
-            android:id="@+id/et_user_name"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@id/et_email"
-            android:layout_marginTop="10dp"
-            android:inputType="text"
-            android:hint="Username"/>
-
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@id/et_user_name"
-            android:layout_marginTop="10dp"
-            android:hint="Password"
-            android:inputType="textVisiblePassword"/>
-
-        <EditText
-            android:id="@+id/et_confirm_password"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Confirm Password"
-            android:layout_below="@id/et_password"
-            android:inputType="textVisiblePassword"
-            android:layout_marginTop="10dp"/>
-
-        <Spinner
-            android:id="@+id/spn_available_status"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_below="@id/et_confirm_password"/>
+            android:orientation="vertical">
 
 
+            <EditText
+                android:id="@+id/et_Full_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_person_white_24dp"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Full Name"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <Spinner
+                android:id="@+id/spn_Blood_Group"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_spinner"
+                android:gravity="center" />
+
+            <Spinner
+                android:id="@+id/spn_gender"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/spn_Blood_Group"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_spinner"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/et_date_of_birth"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/spn_gender"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_spinner"
+                android:gravity="center"
+                android:text="Press to set ''Date of Birth''"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_contact_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_smartphone_white_24dp"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Contact Number"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <Spinner
+                android:id="@+id/spn_country"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/et_contact_no"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_spinner"
+                android:gravity="center" />
+
+            <Spinner
+                android:id="@+id/spn_division"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/spn_country"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_spinner" />
+
+            <Spinner
+                android:id="@+id/spn_district"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@id/spn_division"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/background_spinner" />
+
+            <EditText
+                android:id="@+id/et_permanent_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/spn_district"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_home_white_24dp"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Permanent Address"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="500"
+                android:maxLines="4"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/et_permanent_address"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_email_white_24dp"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/et_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/et_email"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_person_white_24dp"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Username"
+                android:inputType="text"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/et_user_name"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_lock_white_24dp"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/et_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/et_password"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/ic_lock_white_24dp"
+                android:drawablePadding="12dp"
+                android:ems="10"
+                android:hint="Confirm Password"
+                android:inputType="textVisiblePassword"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="#fff" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <Spinner
+                android:id="@+id/spn_available_status"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/et_confirm_password"
+                android:background="@drawable/background_spinner" />
 
 
-    </RelativeLayout>
+        </LinearLayout>
 
-</ScrollView>
+    </ScrollView>
 
-<Button
-    android:id="@+id/btn_Register_General_People"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Register"
-    android:layout_alignParentBottom="true"/>
+    <Button
+        android:id="@+id/btn_Register_General_People"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_signup"
+        android:text="Register"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp" />
+
 
 </RelativeLayout>

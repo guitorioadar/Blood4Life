@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_login_gradients"
+    tools:context="com.baidoos.guitorio.blood4life.LoginAndRegister.RegisterOrganisationDetail">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:layout_below="@+id/testImgaeLogo"
+        android:layout_marginTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The name of your will be considered as the admin of the Organisation and next time the username you provide will be used for the organisation"
+                android:textAlignment="textStart"
+                android:layout_marginTop="5dp"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:background="@drawable/background_textview"
+                android:textColor="@color/white"
+                android:gravity="start"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Admin Detail"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:background="@drawable/background_textview"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/et_org_admin_Full_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:textColorHint="#fff"
+                android:drawableLeft="@drawable/ic_person_white_24dp"
+                android:hint="Full Name"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+
+            <EditText
+                android:id="@+id/et_org_admin_user_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/et_email"
+                android:layout_marginTop="10dp"
+                android:inputType="text"
+                android:hint="Username"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:textColorHint="#fff"
+                android:drawableLeft="@drawable/ic_person_white_24dp"
+                android:textColor="@color/white"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/et_org_admin_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/et_user_name"
+                android:layout_marginTop="10dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:textColorHint="#fff"
+                android:drawableLeft="@drawable/ic_lock_white_24dp"
+                android:textColor="@color/white"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/et_org_admin_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Confirm Password"
+                android:layout_below="@id/et_password"
+                android:inputType="textVisiblePassword"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:textColorHint="#fff"
+                android:drawableLeft="@drawable/ic_lock_white_24dp"
+                android:textColor="@color/white"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/et_org_admin_contact_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:textColorHint="#fff"
+                android:drawableLeft="@drawable/ic_smartphone_white_24dp"
+                android:hint="Contact Number"
+                android:textColor="@color/white"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Organisation Detail"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:background="@drawable/background_textview"
+                android:textColor="@color/white"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv_org_admin_org_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Organisation Name"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:textSize="18sp"
+                android:background="@drawable/background_4"
+                android:textColor="@color/text_color_bg_white"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/et_org_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:textColorHint="#fff"
+                android:drawableLeft="@drawable/ic_person_white_24dp"
+                android:hint="Email of the Org."
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/et_org_alternative_contact_no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:textColorHint="#fff"
+                android:drawableLeft="@drawable/ic_smartphone_white_24dp"
+                android:hint="Alternative Contact Number"
+                android:textColor="@color/white"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/et_org_Main_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/spn_district"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="500"
+                android:maxLines="4"
+                android:hint="Main Address"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:textColorHint="#fff"
+                android:drawableLeft="@drawable/ic_home_white_24dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <Spinner
+                android:id="@+id/spn_org_country"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:background="@drawable/background_spinner"/>
+
+            <EditText
+                android:id="@+id/et_org_objective"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spn_district"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="500"
+                android:maxLines="5"
+                android:hint="Objectives... e.g: who will be your beneficiaries and how your Org. help them"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:textColorHint="#fff"
+                android:drawableLeft="@drawable/ic_object_white_24dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+            <EditText
+                android:id="@+id/et_org_activities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/spn_district"
+                android:inputType="textCapSentences|textMultiLine"
+                android:maxLength="500"
+                android:maxLines="5"
+                android:hint="Avtivities... e.g:What your organisation do to meet it's objectives"
+                android:ems="10"
+                android:background="@android:color/transparent"
+                android:drawablePadding="12dp"
+                android:padding="8dp"
+                android:textColorHint="#fff"
+                android:drawableLeft="@drawable/ic_object_white_24dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:scrollbars="vertical"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#f9d7db" />
+
+
+
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_org_Register"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register Organisation"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_signup"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:onClick="RegisterOrganisationButton"/>
+
+</RelativeLayout>

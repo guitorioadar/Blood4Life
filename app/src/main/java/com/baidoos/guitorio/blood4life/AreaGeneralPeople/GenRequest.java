@@ -4,7 +4,9 @@ package com.baidoos.guitorio.blood4life.AreaGeneralPeople;
  * Created by ADAR on 10/11/2017.
  */
 
-public class GenRequest {String full_name;
+public class GenRequest {
+
+    String full_name;
     String blood_group;
     String contact_no;
 

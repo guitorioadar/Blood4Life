@@ -55,7 +55,7 @@
                 android:textColorHint="#fff"
                 android:maxLines="1"
                 android:drawableLeft="@drawable/ic_person_white_24dp"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="50dp"
                 android:textColor="@color/white"/>
             <View
                 android:layout_width="match_parent"
@@ -115,9 +115,11 @@
                 android:textSize="18sp"
                 android:layout_marginTop="16dp"
                 android:clickable="true"
-                android:padding="16dp"/>
+                android:padding="16dp"
+                android:onClick="SignUpButton"/>
 
             <TextView
+                android:id="@+id/tvForgetPassword"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Forget your Password? "
@@ -125,8 +127,9 @@
                 android:textColor="#fff"
                 android:padding="16dp"
                 android:clickable="true"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="16dp"/>
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="tvForgetPassword"/>
 
         </LinearLayout>
     </ScrollView>

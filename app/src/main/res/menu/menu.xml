@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_add_blood_request"
+        android:title="Add Blood Request"
+        app:showAsAction="always"
+        android:orderInCategory="0"
+        />
+
+
+    <item
+        android:id="@+id/userProfile"
+        android:icon="@drawable/ic_person_white_24dp"
+        android:title="Profile"
+        app:showAsAction="always"
+        android:orderInCategory="0"/>
+
+</menu>

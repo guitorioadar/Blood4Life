@@ -1,13 +1,18 @@
 package com.baidoos.guitorio.blood4life;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.baidoos.guitorio.blood4life.LoginAndRegister.Login;
 import com.baidoos.guitorio.blood4life.LoginAndRegister.Registration;
+import com.baidoos.guitorio.blood4life.LoginAndRegister.RegistrationInitial;
+import com.baidoos.guitorio.blood4life.Profiles.ProfileUsers;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
+        /*SharedPreferences secondPref = getApplicationContext().getSharedPreferences("secondPref", Context.MODE_PRIVATE);
+        Toast.makeText(this, secondPref.getString("secondPref",null), Toast.LENGTH_SHORT).show();*/
+
 
     }
 
@@ -44,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void btnRegistrationMain(View view) {
-        Intent i = new Intent(this, Registration.class);
+        Intent i = new Intent(this, RegistrationInitial.class);
         startActivity(i);
     }
 

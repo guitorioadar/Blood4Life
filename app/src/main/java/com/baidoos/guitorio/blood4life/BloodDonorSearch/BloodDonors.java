@@ -67,11 +67,17 @@ public class BloodDonors extends AppCompatActivity {
         division = intent.getExtras().getString("division").toString();
         district = intent.getExtras().getString("district").toString();
 
+        progressDialog = new ProgressDialog(BloodDonors.this);
+
+        progressDialog.setMessage("Loading...");
+        progressDialog.show();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_SEARCH_BLOOD_DONOR,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+
+                        progressDialog.dismiss();
 
                         //Snackbar.make(rootLayout,response.toString(),Snackbar.LENGTH_LONG).show();
                         //Toast.makeText(BloodDonors.this, response.toString(), Toast.LENGTH_SHORT).show();
@@ -84,7 +90,7 @@ public class BloodDonors extends AppCompatActivity {
 
                             jsonObject = new JSONObject(response);
                             jsonArray = jsonObject.getJSONArray(JSON_ARRAY);
-                            for(int i = 0; i < jsonArray.length(); i++ ){
+                            for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject object = jsonArray.getJSONObject(i);
                                 Donor donor = new Donor();
                                 donor.setFull_name(object.getString("full_name"));
@@ -93,10 +99,10 @@ public class BloodDonors extends AppCompatActivity {
                                 donorList.add(donor);
                             }
 
-                        }catch (JSONException e){
+                        } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                        donorAdapter = new DonorAdapter(BloodDonors.this,donorList);
+                        donorAdapter = new DonorAdapter(BloodDonors.this, donorList);
                         listView.setAdapter(donorAdapter);
 
                     }
@@ -127,21 +133,20 @@ public class BloodDonors extends AppCompatActivity {
         requestQueue.add(stringRequest);
 
 
-
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                Intent intent = new Intent(BloodDonors.this,DonorDetail.class);
+                Intent intent = new Intent(BloodDonors.this, DonorDetail.class);
 
-                Donor me  = donorList.get(position);
+                Donor me = donorList.get(position);
                 //Toast.makeText(BloodDonors.this, me.getFull_name(), Toast.LENGTH_SHORT).show();
-                intent.putExtra("full_name",me.getFull_name());
-                intent.putExtra("blood_group",me.getBlood_group());
-                intent.putExtra("contact_no",me.getContact_no());
-                intent.putExtra("country",country);
-                intent.putExtra("division",division);
-                intent.putExtra("district",district);
+                intent.putExtra("full_name", me.getFull_name());
+                intent.putExtra("blood_group", me.getBlood_group());
+                intent.putExtra("contact_no", me.getContact_no());
+                intent.putExtra("country", country);
+                intent.putExtra("division", division);
+                intent.putExtra("district", district);
 
                 //overridePendingTransition(R.anim.slide_in,R.anim.slide_out);
 
@@ -157,7 +162,7 @@ public class BloodDonors extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(BloodDonors.this,BloodDonorSearch.class);
+        Intent intent = new Intent(BloodDonors.this, BloodDonorSearch.class);
         startActivity(intent);
     }
 }
