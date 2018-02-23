@@ -19,6 +19,7 @@ public class Donor {String full_name;
     }
 
 
+
     public String getFull_name() {
         return full_name;
     }
