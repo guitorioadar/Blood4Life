@@ -8,15 +8,16 @@ public class Donor {String full_name;
     String blood_group;
     String contact_no;
 
-
     public Donor(){
 
     }
 
-    public Donor(String full_name, String blood_group) {
+    public Donor(String full_name, String blood_group, String contact_no) {
         this.full_name = full_name;
         this.blood_group = blood_group;
+        this.contact_no = contact_no;
     }
+
 
     public String getFull_name() {
         return full_name;
