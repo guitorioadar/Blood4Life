@@ -34,10 +34,10 @@ public class SplashScreen extends Activity{
                 // Start your app main activity
 
 
-                /*Intent intentMain = new Intent(SplashScreen.this, MainActivity.class);
-                startActivity(intentMain);*/
+                Intent intentMain = new Intent(SplashScreen.this, MainActivity.class);
+                startActivity(intentMain);
 
-                SharedPreferences pref = SplashScreen.this.getSharedPreferences("UserPref", 0);
+                /*SharedPreferences pref = SplashScreen.this.getSharedPreferences("UserPref", 0);
 
                 //Toast.makeText(SplashScreen.this, pref.getString("LoggedIn",null), Toast.LENGTH_SHORT).show();
 
@@ -47,7 +47,7 @@ public class SplashScreen extends Activity{
                 }else{
                     Intent i = new Intent(SplashScreen.this, MainActivity.class);
                     startActivity(i);
-                }
+                }*/
 
 
 

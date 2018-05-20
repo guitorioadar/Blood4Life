@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -28,6 +29,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 public class BloodDonors extends AppCompatActivity {
 
@@ -79,6 +81,8 @@ public class BloodDonors extends AppCompatActivity {
 
                         progressDialog.dismiss();
 
+                        //Toast.makeText(BloodDonors.this, response, Toast.LENGTH_SHORT).show();
+
                         //Snackbar.make(rootLayout,response.toString(),Snackbar.LENGTH_LONG).show();
                         //Toast.makeText(BloodDonors.this, response.toString(), Toast.LENGTH_SHORT).show();
 
@@ -86,23 +90,23 @@ public class BloodDonors extends AppCompatActivity {
 
                         JSONObject jsonObject = null;
 
-                        try {
+                        try{
 
                             jsonObject = new JSONObject(response);
                             jsonArray = jsonObject.getJSONArray(JSON_ARRAY);
-                            for (int i = 0; i < jsonArray.length(); i++) {
+                            for(int i = 0; i < jsonArray.length(); i++ ){
                                 JSONObject object = jsonArray.getJSONObject(i);
-                                Donor donor = new Donor();
-                                donor.setFull_name(object.getString("full_name"));
-                                donor.setBlood_group(object.getString("blood_group"));
-                                donor.setContact_no(object.getString("contact_no"));
-                                donorList.add(donor);
+                                Donor request = new Donor();
+                                request.setFull_name(object.getString("full_name"));
+                                request.setBlood_group(object.getString("blood_group"));
+                                request.setContact_no(object.getString("contact_no"));
+                                donorList.add(request);
                             }
 
-                        } catch (JSONException e) {
+                        }catch (JSONException e){
                             e.printStackTrace();
                         }
-                        donorAdapter = new DonorAdapter(BloodDonors.this, donorList);
+                        donorAdapter = new DonorAdapter(BloodDonors.this,donorList);
                         listView.setAdapter(donorAdapter);
 
                     }
@@ -155,6 +159,49 @@ public class BloodDonors extends AppCompatActivity {
 
                 //startActivity(inten);
 
+            }
+        });
+
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Donor dnr = donorList.get(i);
+                Toast.makeText(BloodDonors.this, "user_id = "+dnr.getUser_id(), Toast.LENGTH_SHORT).show();
+
+                /*final String id = dnr.getUser_id();
+
+                //Toast.makeText(BloodDonors.this, "Item Selected", Toast.LENGTH_SHORT).show();
+
+                StringRequest stringRequest1 = new StringRequest(Request.Method.POST, Config.URL_DELETE_DONOR,
+                        new Response.Listener<String>() {
+                            @Override
+                            public void onResponse(String response) {
+
+                                Intent intent1 = new Intent(getApplication(),BloodDonorSearch.class);
+                                startActivity(intent1);
+
+                                Toast.makeText(BloodDonors.this, response, Toast.LENGTH_SHORT).show();
+
+                            }
+                        }, new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+
+                    }
+                }){
+
+                    @Override
+                    protected Map<String, String> getParams() throws AuthFailureError {
+                        Map<String,String> params = new HashMap<String, String>();
+                        params.put("user_id",id);
+                        return params;
+                    }
+                };
+                RequestQueue requestQueue1 = Volley.newRequestQueue(getApplicationContext());
+                requestQueue1.add(stringRequest1);*/
+
+                return true;
             }
         });
 
