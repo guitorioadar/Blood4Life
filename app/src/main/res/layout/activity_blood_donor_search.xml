@@ -17,6 +17,8 @@ tools:context="com.baidoos.guitorio.blood4life.BloodDonorSearch.BloodDonorSearch
         android:id="@+id/spnr_blood_group"
         android:layout_width="match_parent"
         android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_spinner"
         android:gravity="center"/>
 
 
@@ -27,7 +29,9 @@ tools:context="com.baidoos.guitorio.blood4life.BloodDonorSearch.BloodDonorSearch
         android:id="@+id/spnr_country"
         android:layout_below="@+id/spnr_blood_group"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_spinner"
+        android:gravity="center" />
 
     <Spinner
         android:layout_width="match_parent"
@@ -35,7 +39,9 @@ tools:context="com.baidoos.guitorio.blood4life.BloodDonorSearch.BloodDonorSearch
         android:id="@+id/spnr_division"
         android:layout_below="@+id/spnr_country"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_spinner"
+        android:gravity="center" />
 
     <Spinner
         android:layout_width="match_parent"
@@ -43,7 +49,9 @@ tools:context="com.baidoos.guitorio.blood4life.BloodDonorSearch.BloodDonorSearch
         android:id="@+id/spnr_district"
         android:layout_below="@+id/spnr_division"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_spinner"
+        android:gravity="center"/>
 
     <Button
         android:layout_width="match_parent"
@@ -51,7 +59,15 @@ tools:context="com.baidoos.guitorio.blood4life.BloodDonorSearch.BloodDonorSearch
         android:text="Search"
         android:id="@+id/btn_search"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background_signup"
+        style="@style/Base.TextAppearance.AppCompat.Body1"
+        android:textColor="#fff"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        android:layout_margin="16dp"/>
 
 </RelativeLayout>
 
